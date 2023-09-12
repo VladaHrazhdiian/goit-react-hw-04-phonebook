@@ -1,13 +1,8 @@
 export default class LocalStorageAPI {
   getItems(key) {
-    const data = JSON.parse(localStorage.getItem(key));
+    const data = localStorage.getItem(key);
 
-    if (!data) {
-      this.setItems(key, []);
-      return [];
-    }
-
-    return data;
+    return JSON.parse(data);
   }
 
   setItems(key, value) {

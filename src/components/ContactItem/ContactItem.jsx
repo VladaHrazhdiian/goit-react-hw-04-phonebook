@@ -4,8 +4,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 
 import { Item } from './ContactItem.styled';
 
-const ContactItem = ({ contact, onDeleteContact }) => {
-  const { id, name, number } = contact;
+const ContactItem = ({ contact: { id, name, number }, onDeleteContact }) => {
 
   return (
     <Item>
